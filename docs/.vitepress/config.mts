@@ -68,7 +68,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ydliu2/roundtable-discussion' }
+      { icon: 'github', link: 'https://github.com/AICode-Nexus/roundtable-discussion' }
     ],
 
     footer: {
