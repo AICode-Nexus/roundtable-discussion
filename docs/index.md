@@ -7,7 +7,7 @@ hero:
   tagline: 产品 × 设计 × 前端 × 后端 × 测试 — 跨角色的深度碰撞
   actions:
     - theme: brand
-      text: 进入第一期 →
+      text: 进入第十三期 →
       link: /episodes/ep01/
     - theme: alt
       text: 关于论坛
@@ -209,39 +209,9 @@ features:
 <div class="timeline-list">
 
 <div class="timeline-item">
-<div class="timeline-date">2025 年 4 月</div>
-<div class="timeline-title">Shopify CEO 全员备忘录</div>
-<div class="timeline-desc">申请新增人头前必须证明 AI 无法完成该工作。AI 使用成为基本要求。</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date">2025 年 5 月</div>
-<div class="timeline-title">Duolingo 宣布 AI-first</div>
-<div class="timeline-desc">逐步淘汰所有可被 AI 替代的外包人员，一次性发布 148 门 AI 生成课程。</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date">2025 年 9 月</div>
-<div class="timeline-title">Klarna AI 客服翻车</div>
-<div class="timeline-desc">因 AI 客服质量问题将部分员工重新调回客服岗，揭示了 AI 替代的边界。</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date">2025 年 11 月</div>
-<div class="timeline-title">Cursor D 轮融资 $23 亿</div>
-<div class="timeline-desc">估值 $293 亿。AI 编码从尝鲜变成企业标配。</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date">2026 年 2 月</div>
-<div class="timeline-title">Klarna 员工降至 3,000 人</div>
-<div class="timeline-desc">从 2022 年的 7,000 人减半，同时员工薪资提升 60%。AI 重构了团队结构。</div>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date">2026 年 3 月</div>
-<div class="timeline-title">Cursor ARR 突破 $20 亿</div>
-<div class="timeline-desc">67% 的财富 500 强使用，每天生成 1.5 亿行企业代码。</div>
+<div class="timeline-date">2026 年 4 月</div>
+<div class="timeline-title">Forbes：三位 Solo Founder 证明"一人公司"</div>
+<div class="timeline-desc">Sam Altman 预言的"一人十亿美元公司"正在成为现实。Solo founder 比例升至 36.3%。</div>
 </div>
 
 <div class="timeline-item">
@@ -251,9 +221,39 @@ features:
 </div>
 
 <div class="timeline-item">
-<div class="timeline-date">2026 年 4 月</div>
-<div class="timeline-title">Forbes：三位 Solo Founder 证明"一人公司"</div>
-<div class="timeline-desc">Sam Altman 预言的"一人十亿美元公司"正在成为现实。Solo founder 比例升至 36.3%。</div>
+<div class="timeline-date">2026 年 3 月</div>
+<div class="timeline-title">Cursor ARR 突破 $20 亿</div>
+<div class="timeline-desc">67% 的财富 500 强使用，每天生成 1.5 亿行企业代码。</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">2026 年 2 月</div>
+<div class="timeline-title">Klarna 员工降至 3,000 人</div>
+<div class="timeline-desc">从 2022 年的 7,000 人减半，同时员工薪资提升 60%。AI 重构了团队结构。</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">2025 年 11 月</div>
+<div class="timeline-title">Cursor D 轮融资 $23 亿</div>
+<div class="timeline-desc">估值 $293 亿。AI 编码从尝鲜变成企业标配。</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">2025 年 9 月</div>
+<div class="timeline-title">Klarna AI 客服翻车</div>
+<div class="timeline-desc">因 AI 客服质量问题将部分员工重新调回客服岗，揭示了 AI 替代的边界。</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">2025 年 5 月</div>
+<div class="timeline-title">Duolingo 宣布 AI-first</div>
+<div class="timeline-desc">逐步淘汰所有可被 AI 替代的外包人员，一次性发布 148 门 AI 生成课程。</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">2025 年 4 月</div>
+<div class="timeline-title">Shopify CEO 全员备忘录</div>
+<div class="timeline-desc">申请新增人头前必须证明 AI 无法完成该工作。AI 使用成为基本要求。</div>
 </div>
 
 </div>
