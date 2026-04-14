@@ -13,33 +13,30 @@ type: interactive
 ## 议题 1：AI 到底在放大个体，还是在重组团队？
 
 <div class="poll-section">
-  <div class="poll-question">你的立场是？</div>
-  
-  <div class="poll-options">
-    <div class="poll-option">
-      <input type="radio" name="poll1" id="poll1-a" />
-      <label for="poll1-a">
-        <span class="option-emoji">🚀</span>
-        <span class="option-text">放大个体——一个人 + AI 能干过去一个团队的活</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll1" id="poll1-b" />
-      <label for="poll1-b">
-        <span class="option-emoji">🔄</span>
-        <span class="option-text">重组团队——团队会变小变精，但不会消失</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll1" id="poll1-c" />
-      <label for="poll1-c">
-        <span class="option-emoji">🤝</span>
-        <span class="option-text">两者同时发生——这不是二选一的问题</span>
-      </label>
-    </div>
-  </div>
+<div class="poll-question">你的立场是？</div>
+<div class="poll-options">
+<div class="poll-option">
+<input type="radio" name="poll1" id="poll1-a" />
+<label for="poll1-a">
+<span class="option-emoji">🚀</span>
+<span class="option-text">放大个体——一个人 + AI 能干过去一个团队的活</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll1" id="poll1-b" />
+<label for="poll1-b">
+<span class="option-emoji">🔄</span>
+<span class="option-text">重组团队——团队会变小变精，但不会消失</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll1" id="poll1-c" />
+<label for="poll1-c">
+<span class="option-emoji">🤝</span>
+<span class="option-text">两者同时发生——这不是二选一的问题</span>
+</label>
+</div>
+</div>
 </div>
 
 ### 💭 延伸思考
@@ -53,33 +50,30 @@ type: interactive
 ## 议题 2：一个需求还需不需要完整链路？
 
 <div class="poll-section">
-  <div class="poll-question">你的立场是？</div>
-  
-  <div class="poll-options">
-    <div class="poll-option">
-      <input type="radio" name="poll2" id="poll2-a" />
-      <label for="poll2-a">
-        <span class="option-emoji">⚡</span>
-        <span class="option-text">不需要——探索型需求可以大幅简化流程</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll2" id="poll2-b" />
-      <label for="poll2-b">
-        <span class="option-emoji">🛡️</span>
-        <span class="option-text">必须要——链路是血泪教训的结晶，不能省</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll2" id="poll2-c" />
-      <label for="poll2-c">
-        <span class="option-emoji">🎯</span>
-        <span class="option-text">分场景——验证层可简化，交付层必须完整</span>
-      </label>
-    </div>
-  </div>
+<div class="poll-question">你的立场是？</div>
+<div class="poll-options">
+<div class="poll-option">
+<input type="radio" name="poll2" id="poll2-a" />
+<label for="poll2-a">
+<span class="option-emoji">⚡</span>
+<span class="option-text">不需要——探索型需求可以大幅简化流程</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll2" id="poll2-b" />
+<label for="poll2-b">
+<span class="option-emoji">🛡️</span>
+<span class="option-text">必须要——链路是血泪教训的结晶，不能省</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll2" id="poll2-c" />
+<label for="poll2-c">
+<span class="option-emoji">🎯</span>
+<span class="option-text">分场景——验证层可简化，交付层必须完整</span>
+</label>
+</div>
+</div>
 </div>
 
 ### 💭 延伸思考
@@ -93,33 +87,30 @@ type: interactive
 ## 议题 3：产品经理用 AI 出了设计稿和代码，你怎么看？
 
 <div class="poll-section">
-  <div class="poll-question">你的立场是？</div>
-  
-  <div class="poll-options">
-    <div class="poll-option">
-      <input type="radio" name="poll3" id="poll3-a" />
-      <label for="poll3-a">
-        <span class="option-emoji">✅</span>
-        <span class="option-text">支持——用于验证想法完全合理，能大幅提效</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll3" id="poll3-b" />
-      <label for="poll3-b">
-        <span class="option-emoji">⚠️</span>
-        <span class="option-text">有条件支持——可以做原型，但不能当交付物</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll3" id="poll3-c" />
-      <label for="poll3-c">
-        <span class="option-emoji">❌</span>
-        <span class="option-text">反对——专业的事应该交给专业的人</span>
-      </label>
-    </div>
-  </div>
+<div class="poll-question">你的立场是？</div>
+<div class="poll-options">
+<div class="poll-option">
+<input type="radio" name="poll3" id="poll3-a" />
+<label for="poll3-a">
+<span class="option-emoji">✅</span>
+<span class="option-text">支持——用于验证想法完全合理，能大幅提效</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll3" id="poll3-b" />
+<label for="poll3-b">
+<span class="option-emoji">⚠️</span>
+<span class="option-text">有条件支持——可以做原型，但不能当交付物</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll3" id="poll3-c" />
+<label for="poll3-c">
+<span class="option-emoji">❌</span>
+<span class="option-text">反对——专业的事应该交给专业的人</span>
+</label>
+</div>
+</div>
 </div>
 
 ### 💭 延伸思考
@@ -133,41 +124,37 @@ type: interactive
 ## 议题 4：未来半年，你最该升级的能力是什么？
 
 <div class="poll-section">
-  <div class="poll-question">你认为最重要的是？</div>
-  
-  <div class="poll-options">
-    <div class="poll-option">
-      <input type="radio" name="poll4" id="poll4-a" />
-      <label for="poll4-a">
-        <span class="option-emoji">🧠</span>
-        <span class="option-text">判断力——知道该做什么、不该做什么</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll4" id="poll4-b" />
-      <label for="poll4-b">
-        <span class="option-emoji">🏗️</span>
-        <span class="option-text">架构思维——从局部优化到系统设计</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll4" id="poll4-c" />
-      <label for="poll4-c">
-        <span class="option-emoji">🤖</span>
-        <span class="option-text">AI 协作能力——让 AI 理解你的意图</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll4" id="poll4-d" />
-      <label for="poll4-d">
-        <span class="option-emoji">🎨</span>
-        <span class="option-text">审美/同理心——AI 学不会的人性洞察</span>
-      </label>
-    </div>
-  </div>
+<div class="poll-question">你认为最重要的是？</div>
+<div class="poll-options">
+<div class="poll-option">
+<input type="radio" name="poll4" id="poll4-a" />
+<label for="poll4-a">
+<span class="option-emoji">🧠</span>
+<span class="option-text">判断力——知道该做什么、不该做什么</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll4" id="poll4-b" />
+<label for="poll4-b">
+<span class="option-emoji">🏗️</span>
+<span class="option-text">架构思维——从局部优化到系统设计</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll4" id="poll4-c" />
+<label for="poll4-c">
+<span class="option-emoji">🤖</span>
+<span class="option-text">AI 协作能力——让 AI 理解你的意图</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll4" id="poll4-d" />
+<label for="poll4-d">
+<span class="option-emoji">🎨</span>
+<span class="option-text">审美/同理心——AI 学不会的人性洞察</span>
+</label>
+</div>
+</div>
 </div>
 
 ### 💭 延伸思考
@@ -181,41 +168,37 @@ type: interactive
 ## 议题 5：AI 写的代码上线出了事故，谁来背锅？
 
 <div class="poll-section">
-  <div class="poll-question">你认为责任在谁？</div>
-  
-  <div class="poll-options">
-    <div class="poll-option">
-      <input type="radio" name="poll5" id="poll5-a" />
-      <label for="poll5-a">
-        <span class="option-emoji">👤</span>
-        <span class="option-text">使用 AI 的人——工具是你选的，结果是你交付的</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll5" id="poll5-b" />
-      <label for="poll5-b">
-        <span class="option-emoji">👔</span>
-        <span class="option-text">拍板上线的人——决策者承担最终责任</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll5" id="poll5-c" />
-      <label for="poll5-c">
-        <span class="option-emoji">🔄</span>
-        <span class="option-text">流程问题——应该追责流程设计，不是个人</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll5" id="poll5-d" />
-      <label for="poll5-d">
-        <span class="option-emoji">👥</span>
-        <span class="option-text">Owner 制——每个功能必须有明确负责人</span>
-      </label>
-    </div>
-  </div>
+<div class="poll-question">你认为责任在谁？</div>
+<div class="poll-options">
+<div class="poll-option">
+<input type="radio" name="poll5" id="poll5-a" />
+<label for="poll5-a">
+<span class="option-emoji">👤</span>
+<span class="option-text">使用 AI 的人——工具是你选的，结果是你交付的</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll5" id="poll5-b" />
+<label for="poll5-b">
+<span class="option-emoji">👔</span>
+<span class="option-text">拍板上线的人——决策者承担最终责任</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll5" id="poll5-c" />
+<label for="poll5-c">
+<span class="option-emoji">🔄</span>
+<span class="option-text">流程问题——应该追责流程设计，不是个人</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll5" id="poll5-d" />
+<label for="poll5-d">
+<span class="option-emoji">👥</span>
+<span class="option-text">Owner 制——每个功能必须有明确负责人</span>
+</label>
+</div>
+</div>
 </div>
 
 ### 💭 延伸思考
@@ -229,41 +212,37 @@ type: interactive
 ## 议题 6：AI 时代，新人还需要从零学起吗？
 
 <div class="poll-section">
-  <div class="poll-question">你的立场是？</div>
-  
-  <div class="poll-options">
-    <div class="poll-option">
-      <input type="radio" name="poll6" id="poll6-a" />
-      <label for="poll6-a">
-        <span class="option-emoji">📚</span>
-        <span class="option-text">必须从零学——基础决定上限，不能跳过</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll6" id="poll6-b" />
-      <label for="poll6-b">
-        <span class="option-emoji">🚀</span>
-        <span class="option-text">先做再学——用 AI 快速产出，遇到问题再学原理</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll6" id="poll6-c" />
-      <label for="poll6-c">
-        <span class="option-emoji">🔀</span>
-        <span class="option-text">双轨制——核心原理手写一遍，重复劳动交给 AI</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll6" id="poll6-d" />
-      <label for="poll6-d">
-        <span class="option-emoji">🎯</span>
-        <span class="option-text">学判断力——不需要学"怎么做"，要学"做什么"</span>
-      </label>
-    </div>
-  </div>
+<div class="poll-question">你的立场是？</div>
+<div class="poll-options">
+<div class="poll-option">
+<input type="radio" name="poll6" id="poll6-a" />
+<label for="poll6-a">
+<span class="option-emoji">📚</span>
+<span class="option-text">必须从零学——基础决定上限，不能跳过</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll6" id="poll6-b" />
+<label for="poll6-b">
+<span class="option-emoji">🚀</span>
+<span class="option-text">先做再学——用 AI 快速产出，遇到问题再学原理</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll6" id="poll6-c" />
+<label for="poll6-c">
+<span class="option-emoji">🔀</span>
+<span class="option-text">双轨制——核心原理手写一遍，重复劳动交给 AI</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll6" id="poll6-d" />
+<label for="poll6-d">
+<span class="option-emoji">🎯</span>
+<span class="option-text">学判断力——不需要学"怎么做"，要学"做什么"</span>
+</label>
+</div>
+</div>
 </div>
 
 ### 💭 延伸思考
@@ -277,49 +256,44 @@ type: interactive
 ## 议题 7：团队只留 3 人 + AI，你会保留谁？
 
 <div class="poll-section">
-  <div class="poll-question">你的保留名单是？（选 3 个）</div>
-  
-  <div class="poll-options multi-select">
-    <div class="poll-option">
-      <input type="checkbox" name="poll7" id="poll7-a" />
-      <label for="poll7-a">
-        <span class="option-emoji">🎯</span>
-        <span class="option-text">产品经理——定方向、做判断</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="checkbox" name="poll7" id="poll7-b" />
-      <label for="poll7-b">
-        <span class="option-emoji">🎨</span>
-        <span class="option-text">设计师——用户体验的守护者</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="checkbox" name="poll7" id="poll7-c" />
-      <label for="poll7-c">
-        <span class="option-emoji">💻</span>
-        <span class="option-text">前端工程师——用户侧的全栈负责人</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="checkbox" name="poll7" id="poll7-d" />
-      <label for="poll7-d">
-        <span class="option-emoji">⚙️</span>
-        <span class="option-text">后端工程师——系统稳定性的守护者</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="checkbox" name="poll7" id="poll7-e" />
-      <label for="poll7-e">
-        <span class="option-emoji">🧪</span>
-        <span class="option-text">测试工程师——AI 代码的质量门卫</span>
-      </label>
-    </div>
-  </div>
+<div class="poll-question">你的保留名单是？（选 3 个）</div>
+<div class="poll-options multi-select">
+<div class="poll-option">
+<input type="checkbox" name="poll7" id="poll7-a" />
+<label for="poll7-a">
+<span class="option-emoji">🎯</span>
+<span class="option-text">产品经理——定方向、做判断</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="checkbox" name="poll7" id="poll7-b" />
+<label for="poll7-b">
+<span class="option-emoji">🎨</span>
+<span class="option-text">设计师——用户体验的守护者</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="checkbox" name="poll7" id="poll7-c" />
+<label for="poll7-c">
+<span class="option-emoji">💻</span>
+<span class="option-text">前端工程师——用户侧的全栈负责人</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="checkbox" name="poll7" id="poll7-d" />
+<label for="poll7-d">
+<span class="option-emoji">⚙️</span>
+<span class="option-text">后端工程师——系统稳定性的守护者</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="checkbox" name="poll7" id="poll7-e" />
+<label for="poll7-e">
+<span class="option-emoji">🧪</span>
+<span class="option-text">测试工程师——AI 代码的质量门卫</span>
+</label>
+</div>
+</div>
 </div>
 
 ### 💭 延伸思考
@@ -333,41 +307,37 @@ type: interactive
 ## 议题 8：人人全栈是解放还是灾难？
 
 <div class="poll-section">
-  <div class="poll-question">你的立场是？</div>
-  
-  <div class="poll-options">
-    <div class="poll-option">
-      <input type="radio" name="poll8" id="poll8-a" />
-      <label for="poll8-a">
-        <span class="option-emoji">🎉</span>
-        <span class="option-text">解放——打破边界，每个人都能快速验证想法</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll8" id="poll8-b" />
-      <label for="poll8-b">
-        <span class="option-emoji">⚠️</span>
-        <span class="option-text">灾难——平庸的效率打败卓越的品质</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll8" id="poll8-c" />
-      <label for="poll8-c">
-        <span class="option-emoji">📏</span>
-        <span class="option-text">看规模——小团队是解放，大团队是灾难</span>
-      </label>
-    </div>
-    
-    <div class="poll-option">
-      <input type="radio" name="poll8" id="poll8-d" />
-      <label for="poll8-d">
-        <span class="option-emoji">🎯</span>
-        <span class="option-text">T 型最优——一专多能，深度 + 广度结合</span>
-      </label>
-    </div>
-  </div>
+<div class="poll-question">你的立场是？</div>
+<div class="poll-options">
+<div class="poll-option">
+<input type="radio" name="poll8" id="poll8-a" />
+<label for="poll8-a">
+<span class="option-emoji">🎉</span>
+<span class="option-text">解放——打破边界，每个人都能快速验证想法</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll8" id="poll8-b" />
+<label for="poll8-b">
+<span class="option-emoji">⚠️</span>
+<span class="option-text">灾难——平庸的效率打败卓越的品质</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll8" id="poll8-c" />
+<label for="poll8-c">
+<span class="option-emoji">📏</span>
+<span class="option-text">看规模——小团队是解放，大团队是灾难</span>
+</label>
+</div>
+<div class="poll-option">
+<input type="radio" name="poll8" id="poll8-d" />
+<label for="poll8-d">
+<span class="option-emoji">🎯</span>
+<span class="option-text">T 型最优——一专多能，深度 + 广度结合</span>
+</label>
+</div>
+</div>
 </div>
 
 ### 💭 延伸思考

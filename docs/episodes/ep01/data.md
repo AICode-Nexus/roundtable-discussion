@@ -13,7 +13,6 @@ type: data
 ## 超级个体的崛起
 
 <div class="chart-section">
-
 ### Solo Founder 创业比例
 
 <div class="bar-chart">
