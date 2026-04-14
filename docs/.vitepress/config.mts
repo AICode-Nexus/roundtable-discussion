@@ -23,11 +23,13 @@ export default defineConfig({
           text: '第一期：超级个体 vs 超级团队',
           items: [
             { text: '📋 本期概览', link: '/episodes/ep01/' },
+            { text: '👥 嘉宾角色解读', link: '/episodes/ep01/roles' },
             { text: '💬 开场：AI 放大个体还是重组团队？', link: '/episodes/ep01/topic-1' },
             { text: '🔥 冲突：还需不需要完整链路？', link: '/episodes/ep01/topic-2' },
             { text: '🔥 升级：AI 出设计稿和代码，怎么看？', link: '/episodes/ep01/topic-3' },
             { text: '🧭 收束：未来 3 年最该升级的能力', link: '/episodes/ep01/topic-4' },
-            { text: '🎲 快问快答', link: '/episodes/ep01/lightning' }
+            { text: '🎲 快问快答', link: '/episodes/ep01/lightning' },
+            { text: '📚 延伸阅读', link: '/episodes/ep01/references' }
           ]
         }
       ]
