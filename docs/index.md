@@ -37,24 +37,32 @@ features:
 ---
 
 <style>
+/* 时间线区域 */
 .timeline {
-  max-width: 720px;
-  margin: 2rem auto 0;
+  max-width: 780px;
+  margin: 3rem auto 2rem;
   padding: 0 1.5rem;
 }
 .timeline h2 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .timeline .subtitle {
   text-align: center;
   color: var(--vp-c-text-2);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
 }
+
+/* 时间线轴 */
 .timeline-list {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
 }
 .timeline-list::before {
   content: '';
@@ -63,36 +71,132 @@ features:
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--vp-c-brand-1);
-  opacity: 0.3;
+  background: linear-gradient(180deg, var(--vp-c-brand-1), #a855f7, #ec4899);
+  opacity: 0.35;
+  border-radius: 2px;
 }
+
+/* 时间线卡片项 */
 .timeline-item {
   position: relative;
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  padding-left: 1.5rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: fadeInUp 0.5s ease-out both;
 }
+.timeline-item:nth-child(1) { animation-delay: 0.05s; }
+.timeline-item:nth-child(2) { animation-delay: 0.1s; }
+.timeline-item:nth-child(3) { animation-delay: 0.15s; }
+.timeline-item:nth-child(4) { animation-delay: 0.2s; }
+.timeline-item:nth-child(5) { animation-delay: 0.25s; }
+.timeline-item:nth-child(6) { animation-delay: 0.3s; }
+.timeline-item:nth-child(7) { animation-delay: 0.35s; }
+.timeline-item:nth-child(8) { animation-delay: 0.4s; }
+
+.timeline-item:hover {
+  transform: translateX(4px);
+  border-color: var(--vp-c-brand-soft);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.08);
+  background: linear-gradient(135deg, var(--vp-c-bg-soft) 0%, rgba(99, 102, 241, 0.03) 100%);
+}
+
+/* 时间线圆点 */
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -1.85rem;
-  top: 0.5rem;
-  width: 10px;
-  height: 10px;
+  left: -2.35rem;
+  top: 1.25rem;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 3px var(--vp-c-bg), 0 0 0 5px var(--vp-c-brand-soft);
+  transition: all 0.3s ease;
 }
+
+.timeline-item:hover::before {
+  background: #a855f7;
+  box-shadow: 0 0 0 3px var(--vp-c-bg), 0 0 0 5px rgba(168, 85, 247, 0.3), 0 0 12px rgba(168, 85, 247, 0.2);
+  transform: scale(1.15);
+}
+
+/* 时间线日期 */
 .timeline-date {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--vp-c-brand-1);
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--vp-c-brand-soft);
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
 }
+
+/* 时间线标题 */
 .timeline-title {
-  font-weight: 600;
-  margin: 0.2rem 0;
+  font-weight: 700;
+  margin: 0.3rem 0 0.15rem;
+  font-size: 1rem;
+  color: var(--vp-c-text-1);
 }
+
+/* 时间线描述 */
 .timeline-desc {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+/* 时间线顶部装饰 */
+.timeline::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+  border-radius: 4px;
+  margin: 0 auto 1.5rem;
+}
+
+/* 暗色模式适配 */
+.dark .timeline-item {
+  background: var(--vp-c-bg-soft);
+}
+.dark .timeline-item:hover {
+  background: linear-gradient(135deg, var(--vp-c-bg-soft) 0%, rgba(129, 140, 248, 0.04) 100%);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式 */
+@media (max-width: 640px) {
+  .timeline-list {
+    padding-left: 2rem;
+  }
+  .timeline-item {
+    padding: 0.85rem 1rem 0.85rem 1.25rem;
+  }
+  .timeline-item::before {
+    left: -1.85rem;
+    width: 10px;
+    height: 10px;
+  }
 }
 </style>
 

@@ -28,6 +28,10 @@ export default defineConfig({
             { text: '🔥 冲突：还需不需要完整链路？', link: '/episodes/ep01/topic-2' },
             { text: '🔥 升级：AI 出设计稿和代码，怎么看？', link: '/episodes/ep01/topic-3' },
             { text: '🧭 收束：未来 3 年最该升级的能力', link: '/episodes/ep01/topic-4' },
+            { text: '⚖️ 辩论：AI 代码出事故谁背锅？', link: '/episodes/ep01/topic-5' },
+            { text: '🎓 辩论：新人还需要从零学起吗？', link: '/episodes/ep01/topic-6' },
+            { text: '🏆 生存：团队只留 3 人，保留谁？', link: '/episodes/ep01/topic-7' },
+            { text: '🌐 辩论：人人全栈是解放还是灾难？', link: '/episodes/ep01/topic-8' },
             { text: '🎲 快问快答', link: '/episodes/ep01/lightning' },
             { text: '📚 延伸阅读', link: '/episodes/ep01/references' }
           ]

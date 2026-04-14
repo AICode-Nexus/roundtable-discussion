@@ -1,3 +1,8 @@
+/* ============================================
+   圆桌论坛 — 自定义主题样式
+   ============================================ */
+
+/* --- CSS 变量 --- */
 :root {
   --vp-c-brand-1: #6366f1;
   --vp-c-brand-2: #4f46e5;
@@ -7,6 +12,9 @@
   --vp-home-hero-name-background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
   --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(168, 85, 247, 0.2) 50%, rgba(236, 72, 153, 0.2) 100%);
   --vp-home-hero-image-filter: blur(44px);
+  --rt-glow-purple: rgba(139, 92, 246, 0.15);
+  --rt-glow-pink: rgba(236, 72, 153, 0.1);
+  --rt-glow-blue: rgba(99, 102, 241, 0.12);
 }
 
 .dark {
@@ -14,7 +22,222 @@
   --vp-c-brand-2: #6366f1;
   --vp-c-brand-3: #4f46e5;
   --vp-c-brand-soft: rgba(129, 140, 248, 0.14);
+  --rt-glow-purple: rgba(139, 92, 246, 0.08);
+  --rt-glow-pink: rgba(236, 72, 153, 0.06);
+  --rt-glow-blue: rgba(99, 102, 241, 0.08);
 }
+
+/* --- 全局入场动画 --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================
+   Hero 区域增强
+   ============================================ */
+
+/* Hero 背景装饰光晕 */
+.VPHero {
+  position: relative;
+  overflow: hidden;
+}
+
+.VPHero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--rt-glow-purple), transparent 70%);
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.VPHero::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--rt-glow-pink), transparent 70%);
+  animation: float 6s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hero 内容保持在光晕之上 */
+.VPHero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero 标题动画 */
+.VPHero .name {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.VPHero .text {
+  animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.VPHero .tagline {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.VPHero .actions {
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+/* Hero 按钮增强 */
+.VPHero .VPButton.brand {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border: none;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.VPHero .VPButton.brand:hover {
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.45);
+  transform: translateY(-2px);
+}
+
+.VPHero .VPButton.alt {
+  border: 1.5px solid var(--vp-c-brand-soft);
+  transition: all 0.3s ease;
+}
+
+.VPHero .VPButton.alt:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Features 卡片重新设计
+   ============================================ */
+
+/* 卡片容器入场动画 */
+.VPFeatures {
+  position: relative;
+}
+
+.VPFeatures .VPFeature {
+  animation: fadeInUp 0.6s ease-out both;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.VPFeatures .VPFeature:nth-child(1) { animation-delay: 0.1s; }
+.VPFeatures .VPFeature:nth-child(2) { animation-delay: 0.2s; }
+.VPFeatures .VPFeature:nth-child(3) { animation-delay: 0.3s; }
+.VPFeatures .VPFeature:nth-child(4) { animation-delay: 0.4s; }
+
+/* 卡片渐变边框 */
+.VPFeatures .item {
+  position: relative;
+  border-radius: 12px;
+  background: linear-gradient(var(--vp-c-bg), var(--vp-c-bg)) padding-box,
+              linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.15)) border-box;
+  border: 1.5px solid transparent;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.VPFeatures .item:hover {
+  border-color: transparent;
+  background: linear-gradient(var(--vp-c-bg), var(--vp-c-bg)) padding-box,
+              linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(168, 85, 247, 0.4), rgba(236, 72, 153, 0.3)) border-box;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.12), 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* 卡片图标增强 */
+.VPFeature .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  animation: float 4s ease-in-out infinite;
+}
+
+.VPFeature:nth-child(2) .icon { animation-delay: -1s; }
+.VPFeature:nth-child(3) .icon { animation-delay: -2s; }
+.VPFeature:nth-child(4) .icon { animation-delay: -3s; }
+
+/* 卡片标题渐变 */
+.VPFeature .title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* 卡片链接样式 */
+.VPFeature .link-text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.VPFeature:hover .link-text {
+  color: var(--vp-c-brand-2);
+}
+
+.VPFeature .link-text-value::after {
+  content: ' →';
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.VPFeature:hover .link-text-value::after {
+  transform: translateX(4px);
+}
+
+/* Features 区域顶部装饰分隔线 */
+.VPFeatures::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+  border-radius: 4px;
+  margin: 0 auto 2rem;
+}
+
+/* ============================================
+   内容页面样式
+   ============================================ */
 
 /* 嘉宾观点引用块样式 */
 .vp-doc blockquote {
@@ -23,6 +246,12 @@
   padding: 1rem 1.25rem;
   border-radius: 0 8px 8px 0;
   margin: 0.75rem 0;
+  transition: all 0.2s ease;
+}
+
+.vp-doc blockquote:hover {
+  background: rgba(99, 102, 241, 0.08);
+  border-left-width: 4px;
 }
 
 .vp-doc blockquote p {
@@ -54,18 +283,99 @@
   padding: 1.25rem 1.5rem;
 }
 
-/* Features 卡片 hover 效果 */
-.VPFeature {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+/* ============================================
+   侧边栏增强
+   ============================================ */
 
-.VPFeature:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
-}
-
-/* 侧边栏当前项高亮 */
 .VPSidebarItem.is-active > .item .link > .text {
   color: var(--vp-c-brand-1);
   font-weight: 600;
+}
+
+.VPSidebar .VPSidebarItem .item {
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.VPSidebar .VPSidebarItem .item:hover {
+  background: var(--vp-c-brand-soft);
+}
+
+/* ============================================
+   页面装饰背景
+   ============================================ */
+
+/* 首页 body 微妙网格纹理 */
+.Layout.is-home {
+  background-image:
+    radial-gradient(circle at 15% 20%, var(--rt-glow-purple), transparent 40%),
+    radial-gradient(circle at 85% 60%, var(--rt-glow-pink), transparent 40%);
+  background-attachment: fixed;
+}
+
+/* ============================================
+   暗色模式特殊适配
+   ============================================ */
+
+.dark .VPFeatures .item {
+  background: linear-gradient(var(--vp-c-bg), var(--vp-c-bg)) padding-box,
+              linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.15), rgba(236, 72, 153, 0.1)) border-box;
+}
+
+.dark .VPFeatures .item:hover {
+  background: linear-gradient(var(--vp-c-bg), var(--vp-c-bg)) padding-box,
+              linear-gradient(135deg, rgba(99, 102, 241, 0.45), rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.2)) border-box;
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.08), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark .VPHero .VPButton.brand {
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
+}
+
+.dark .VPHero .VPButton.brand:hover {
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.35);
+}
+
+.dark .vp-doc blockquote:hover {
+  background: rgba(129, 140, 248, 0.06);
+}
+
+/* ============================================
+   滚动条美化
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-soft);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* ============================================
+   响应式优化
+   ============================================ */
+
+@media (max-width: 768px) {
+  .VPHero::before {
+    width: 300px;
+    height: 300px;
+    top: -10%;
+    left: -15%;
+  }
+
+  .VPHero::after {
+    width: 250px;
+    height: 250px;
+  }
 }
