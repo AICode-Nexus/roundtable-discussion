@@ -7,6 +7,13 @@
   --vp-c-brand-2: #4f46e5;
   --vp-c-brand-3: #4338ca;
   --vp-c-brand-soft: rgba(99, 102, 241, 0.14);
+
+  /* 角色色板 */
+  --rt-pm: #f43f5e;
+  --rt-design: #f59e0b;
+  --rt-fe: #06b6d4;
+  --rt-be: #8b5cf6;
+  --rt-qa: #10b981;
 }
 
 .dark {
@@ -16,58 +23,271 @@
   --vp-c-brand-soft: rgba(129, 140, 248, 0.16);
 }
 
-/* 隐藏默认 hero 和 features（我们用自定义组件） */
-.VPHome .VPHero .main {
-  display: none;
-}
-.VPHome .VPFeatures .container {
-  display: none;
+/* 隐藏默认 hero 和 features */
+.VPHome .VPHero .main { display: none; }
+.VPHome .VPFeatures .container { display: none; }
+
+/* ============================================
+   内容页 — 页面标题 (H1)
+   ============================================ */
+
+.vp-doc h1 {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 40%, #d946ef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  padding-bottom: 16px;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #6366f1, #d946ef, transparent) 1;
 }
 
 /* ============================================
-   内容页面样式
+   内容页 — H2 标题
    ============================================ */
 
-/* 引用块 */
-.vp-doc blockquote {
-  border-left: 3px solid var(--vp-c-brand-1);
-  background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(139,92,246,0.04));
-  padding: 1rem 1.25rem;
-  border-radius: 0 12px 12px 0;
-  margin: 0.75rem 0;
-  transition: all 0.3s ease;
+.vp-doc h2 {
+  position: relative;
+  padding-left: 16px;
+  border-top: none;
+  margin-top: 2.5rem;
 }
-.vp-doc blockquote:hover {
-  background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(6,182,212,0.06));
-  border-left-width: 4px;
-  transform: translateX(2px);
+
+.vp-doc h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #6366f1, #d946ef);
 }
-.vp-doc blockquote p {
-  color: var(--vp-c-text-1);
-  line-height: 1.75;
-}
+
+/* ============================================
+   内容页 — H3 角色标题（带 emoji 前缀）
+   ============================================ */
 
 .vp-doc h3 {
   margin-top: 2rem;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  font-size: 1.05rem;
+  transition: all 0.25s ease;
 }
 
-/* 表格 */
+.vp-doc h3:hover {
+  border-color: var(--vp-c-brand-soft);
+  box-shadow: 0 2px 12px rgba(99,102,241,0.06);
+}
+
+/* ============================================
+   内容页 — 引用块（嘉宾观点）
+   ============================================ */
+
+.vp-doc blockquote {
+  position: relative;
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: linear-gradient(135deg, rgba(99,102,241,0.05) 0%, rgba(139,92,246,0.03) 100%);
+  padding: 16px 20px;
+  border-radius: 0 14px 14px 0;
+  margin: 12px 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.vp-doc blockquote:hover {
+  transform: translateX(4px);
+  border-left-width: 4px;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.08);
+  background: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(6,182,212,0.04) 100%);
+}
+
+.vp-doc blockquote p {
+  color: var(--vp-c-text-1);
+  line-height: 1.8;
+}
+
+.vp-doc blockquote p strong {
+  color: var(--vp-c-brand-1);
+}
+
+/* 引用块内嵌套引用 — 金句高亮 */
+.vp-doc blockquote blockquote {
+  border-left-color: #f59e0b;
+  background: rgba(245,158,11,0.06);
+}
+
+/* ============================================
+   内容页 — 表格
+   ============================================ */
+
 .vp-doc table {
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-}
-.vp-doc table th {
-  background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(6,182,212,0.08));
-  font-weight: 600;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
 }
 
-/* 金句收录 */
+.vp-doc table th {
+  background: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(6,182,212,0.06) 100%);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  color: var(--vp-c-text-1);
+  border-bottom: 2px solid var(--vp-c-brand-soft);
+}
+
+.vp-doc table td {
+  transition: background 0.2s ease;
+}
+
+.vp-doc table tr:hover td {
+  background: rgba(99,102,241,0.03);
+}
+
+.vp-doc table td strong {
+  color: var(--vp-c-brand-1);
+}
+
+.dark .vp-doc table {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* ============================================
+   内容页 — Callout (:::tip / :::warning 等)
+   ============================================ */
+
+.vp-doc .custom-block {
+  border-radius: 14px;
+  padding: 18px 22px;
+  border: 1px solid;
+  transition: all 0.25s ease;
+}
+
+.vp-doc .custom-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+}
+
+/* tip */
+.vp-doc .custom-block.tip {
+  background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(139,92,246,0.04));
+  border-color: rgba(99,102,241,0.15);
+}
+
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+}
+
+/* warning */
+.vp-doc .custom-block.warning {
+  background: linear-gradient(135deg, rgba(245,158,11,0.06), rgba(249,115,22,0.04));
+  border-color: rgba(245,158,11,0.2);
+}
+
+/* danger */
+.vp-doc .custom-block.danger {
+  background: linear-gradient(135deg, rgba(244,63,94,0.06), rgba(239,68,68,0.04));
+  border-color: rgba(244,63,94,0.2);
+}
+
+/* info */
+.vp-doc .custom-block.info {
+  background: linear-gradient(135deg, rgba(6,182,212,0.06), rgba(14,165,233,0.04));
+  border-color: rgba(6,182,212,0.15);
+}
+
+/* ============================================
+   内容页 — 共识与分歧区域
+   ============================================ */
+
+.vp-doc h2#共识与分歧 ~ p strong:first-child,
+.vp-doc h2#共识与分歧 + p strong {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+
+/* ============================================
+   内容页 — 金句收录
+   ============================================ */
+
 .vp-doc h2#金句收录 + blockquote,
 .vp-doc h2 + blockquote:last-of-type {
-  background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(244,63,94,0.06) 50%, rgba(139,92,246,0.08));
-  border-left: 3px solid;
-  border-image: linear-gradient(180deg, #f59e0b, #f43f5e, #8b5cf6) 1;
-  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg,
+    rgba(245,158,11,0.07) 0%,
+    rgba(244,63,94,0.05) 33%,
+    rgba(139,92,246,0.07) 66%,
+    rgba(6,182,212,0.05) 100%
+  );
+  border-left: 4px solid;
+  border-image: linear-gradient(180deg, #f59e0b, #f43f5e, #8b5cf6, #06b6d4) 1;
+  padding: 20px 24px;
+  border-radius: 0 16px 16px 0;
+}
+
+/* ============================================
+   内容页 — 列表
+   ============================================ */
+
+.vp-doc ul li::marker {
+  color: var(--vp-c-brand-1);
+}
+
+.vp-doc ol li::marker {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+}
+
+/* ============================================
+   内容页 — 链接
+   ============================================ */
+
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 500;
+  background: linear-gradient(var(--vp-c-brand-1), var(--vp-c-brand-1)) no-repeat 0 100%;
+  background-size: 0% 1.5px;
+  transition: background-size 0.3s ease;
+}
+
+.vp-doc a:hover {
+  background-size: 100% 1.5px;
+}
+
+/* ============================================
+   内容页 — 行内代码
+   ============================================ */
+
+.vp-doc :not(pre) > code {
+  background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(139,92,246,0.06));
+  color: var(--vp-c-brand-1);
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-size: 0.88em;
+  font-weight: 500;
+  border: 1px solid rgba(99,102,241,0.1);
+}
+
+/* ============================================
+   内容页 — 分隔线
+   ============================================ */
+
+.vp-doc hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #6366f1, #d946ef, #06b6d4, transparent);
+  border-radius: 3px;
+  margin: 2.5rem 0;
+  opacity: 0.3;
 }
 
 /* ============================================
@@ -78,12 +298,53 @@
   color: var(--vp-c-brand-1);
   font-weight: 600;
 }
+
 .VPSidebar .VPSidebarItem .item {
   border-radius: 8px;
   transition: all 0.2s ease;
 }
+
 .VPSidebar .VPSidebarItem .item:hover {
   background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(6,182,212,0.04));
+}
+
+/* 侧边栏分组标题 */
+.VPSidebarItem .text {
+  font-weight: 600;
+}
+
+/* ============================================
+   页面导航（右侧 outline）
+   ============================================ */
+
+.VPDocOutlineItem a {
+  transition: all 0.2s ease;
+}
+
+.VPDocOutlineItem a.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* ============================================
+   上下篇导航
+   ============================================ */
+
+.VPDocFooter .pager-link {
+  border-radius: 14px;
+  border: 1px solid var(--vp-c-divider);
+  transition: all 0.3s ease;
+}
+
+.VPDocFooter .pager-link:hover {
+  border-color: var(--vp-c-brand-soft);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.08);
+  transform: translateY(-2px);
+}
+
+.VPDocFooter .pager-link .title {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
 }
 
 /* ============================================
@@ -98,8 +359,48 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #f43f5e, #f59e0b, #10b981, #06b6d4, #8b5cf6);
+  background: linear-gradient(180deg, #6366f1, #8b5cf6, #d946ef);
   border-radius: 3px;
+}
+
+/* ============================================
+   暗色模式补充
+   ============================================ */
+
+.dark .vp-doc h1 {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 40%, #e879f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-image: linear-gradient(90deg, #818cf8, #e879f9, transparent) 1;
+}
+
+.dark .vp-doc blockquote {
+  background: linear-gradient(135deg, rgba(129,140,248,0.06), rgba(167,139,250,0.04));
+}
+
+.dark .vp-doc blockquote:hover {
+  background: linear-gradient(135deg, rgba(129,140,248,0.1), rgba(34,211,238,0.04));
+  box-shadow: 0 4px 20px rgba(129,140,248,0.06);
+}
+
+.dark .vp-doc blockquote p strong {
+  color: #a78bfa;
+}
+
+.dark .vp-doc h3 {
+  background: var(--vp-c-bg-soft);
+  border-color: rgba(255,255,255,0.06);
+}
+
+.dark .vp-doc .custom-block:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+}
+
+.dark .vp-doc :not(pre) > code {
+  background: linear-gradient(135deg, rgba(129,140,248,0.1), rgba(167,139,250,0.08));
+  color: #a78bfa;
+  border-color: rgba(129,140,248,0.12);
 }
 
 /* ============================================
