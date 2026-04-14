@@ -7,51 +7,69 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
 
 <template>
   <section class="hero-wrap" :class="{ visible }">
-    <!-- 浮动装饰形状 -->
-    <div class="hero-shapes" aria-hidden="true">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
-      <div class="shape shape-5"></div>
-    </div>
-
     <div class="hero-content">
+      <!-- 顶部期数标签 -->
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        <span>第一期 · 热议中</span>
+        <span>第十三期 · 热议中</span>
       </div>
 
-      <h1 class="hero-title">
-        <span class="title-line title-line-1">圆桌论坛</span>
-      </h1>
+      <!-- 主标题 -->
+      <h1 class="hero-title">圆桌论坛</h1>
 
+      <!-- 副标题 -->
       <h2 class="hero-subtitle">
-        AI 时代：超级个体的崛起与团队的重构
+        AI 时代：超级个体的崛起<br class="mobile-br">与团队的重构
       </h2>
 
-      <p class="hero-tagline">
-        <span class="tag tag-rose">产品</span>
-        <span class="tag-x">×</span>
-        <span class="tag tag-amber">设计</span>
-        <span class="tag-x">×</span>
-        <span class="tag tag-cyan">前端</span>
-        <span class="tag-x">×</span>
-        <span class="tag tag-violet">后端</span>
-        <span class="tag-x">×</span>
-        <span class="tag tag-emerald">测试</span>
-        <span class="tag-sep">—</span>
-        <span class="tag-desc">跨角色的深度碰撞</span>
-      </p>
+      <!-- 角色标签组 -->
+      <div class="hero-roles">
+        <span class="role role-rose">
+          <span class="role-icon">🎯</span>产品
+        </span>
+        <span class="role role-amber">
+          <span class="role-icon">🎨</span>设计
+        </span>
+        <span class="role role-cyan">
+          <span class="role-icon">⚛️</span>前端
+        </span>
+        <span class="role role-violet">
+          <span class="role-icon">⚙️</span>后端
+        </span>
+        <span class="role role-emerald">
+          <span class="role-icon">🧪</span>测试
+        </span>
+      </div>
 
+      <p class="hero-desc">五种角色，五种立场 — 跨角色的深度碰撞</p>
+
+      <!-- 按钮 -->
       <div class="hero-actions">
         <a href="/roundtable-discussion/episodes/ep01/" class="btn btn-primary">
-          <span>进入第一期</span>
+          <span>进入第十三期</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="/roundtable-discussion/about" class="btn btn-ghost">
           关于论坛
         </a>
+      </div>
+
+      <!-- 数据亮点 -->
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">8</span>
+          <span class="stat-label">个议题</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">种角色</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">15</span>
+          <span class="stat-label">篇深度讨论</span>
+        </div>
       </div>
     </div>
   </section>
@@ -61,67 +79,17 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
 .hero-wrap {
   position: relative;
   z-index: 1;
-  padding: 80px 24px 48px;
-  max-width: 720px;
+  padding: 72px 24px 32px;
+  max-width: 800px;
   margin: 0 auto;
+  text-align: center;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(24px);
+  transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .hero-wrap.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* 浮动装饰 */
-.hero-shapes {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.6;
-}
-.shape-1 {
-  width: 16px; height: 16px;
-  background: #f43f5e;
-  top: 15%; left: 5%;
-  animation: floatShape 6s ease-in-out infinite;
-}
-.shape-2 {
-  width: 12px; height: 12px;
-  background: #f59e0b;
-  top: 25%; right: 8%;
-  animation: floatShape 5s ease-in-out infinite 0.5s;
-}
-.shape-3 {
-  width: 20px; height: 20px;
-  background: #06b6d4;
-  bottom: 30%; left: 10%;
-  animation: floatShape 7s ease-in-out infinite 1s;
-  border-radius: 4px;
-  transform: rotate(45deg);
-}
-.shape-4 {
-  width: 10px; height: 10px;
-  background: #8b5cf6;
-  top: 60%; right: 12%;
-  animation: floatShape 5.5s ease-in-out infinite 1.5s;
-}
-.shape-5 {
-  width: 14px; height: 14px;
-  background: #10b981;
-  bottom: 15%; right: 25%;
-  animation: floatShape 6.5s ease-in-out infinite 0.8s;
-  border-radius: 3px;
-}
-
-@keyframes floatShape {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-18px) rotate(180deg); }
 }
 
 /* Badge */
@@ -129,144 +97,175 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 6px 18px;
   border-radius: 100px;
-  background: rgba(244, 63, 94, 0.1);
-  border: 1px solid rgba(244, 63, 94, 0.2);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 28px;
+  animation: fadeIn 0.6s ease 0.2s both;
+
+  background: linear-gradient(
+    135deg,
+    rgba(244,63,94,0.08),
+    rgba(139,92,246,0.08)
+  );
+  border: 1px solid rgba(244,63,94,0.15);
   color: #e11d48;
-  margin-bottom: 24px;
-  animation: fadeIn 0.6s ease 0.3s both;
 }
 .dark .hero-badge {
-  background: rgba(244, 63, 94, 0.15);
+  background: linear-gradient(135deg, rgba(244,63,94,0.12), rgba(139,92,246,0.12));
+  border-color: rgba(244,63,94,0.2);
   color: #fb7185;
 }
 .badge-dot {
-  width: 8px; height: 8px;
+  width: 7px; height: 7px;
   border-radius: 50%;
   background: #f43f5e;
   animation: pulse 2s ease-in-out infinite;
 }
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.4); }
-}
 
 /* Title */
 .hero-title {
-  font-size: clamp(2.8rem, 8vw, 4.5rem);
+  font-size: clamp(3rem, 9vw, 5rem);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.05;
   margin-bottom: 16px;
-  animation: fadeIn 0.6s ease 0.4s both;
-}
-.title-line-1 {
+  letter-spacing: -0.03em;
+  animation: fadeIn 0.7s ease 0.3s both;
+
   background: linear-gradient(
     135deg,
-    #f43f5e 0%, #f59e0b 20%, #10b981 40%,
-    #06b6d4 60%, #8b5cf6 80%, #d946ef 100%
+    #f43f5e 0%, #f59e0b 18%, #10b981 36%,
+    #06b6d4 54%, #8b5cf6 72%, #d946ef 90%, #f43f5e 100%
   );
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradientFlow 5s ease infinite;
-}
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  animation: fadeIn 0.7s ease 0.3s both, gradientFlow 6s ease infinite;
 }
 
 /* Subtitle */
 .hero-subtitle {
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.3rem, 3.5vw, 1.85rem);
   font-weight: 700;
   color: var(--vp-c-text-1);
-  margin-bottom: 20px;
-  line-height: 1.3;
-  animation: fadeIn 0.6s ease 0.5s both;
+  margin-bottom: 28px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  animation: fadeIn 0.7s ease 0.4s both;
 }
+.mobile-br { display: none; }
 
-/* Tagline with colored tags */
-.hero-tagline {
+/* 角色标签组 */
+.hero-roles {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  animation: fadeIn 0.7s ease 0.5s both;
+}
+.role {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 36px;
-  animation: fadeIn 0.6s ease 0.6s both;
-}
-.tag {
-  display: inline-block;
-  padding: 4px 14px;
-  border-radius: 100px;
-  font-size: 0.88rem;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
 }
-.tag-rose { background: rgba(244,63,94,0.15); color: #e11d48; }
-.tag-amber { background: rgba(245,158,11,0.15); color: #d97706; }
-.tag-cyan { background: rgba(6,182,212,0.15); color: #0891b2; }
-.tag-violet { background: rgba(139,92,246,0.15); color: #7c3aed; }
-.tag-emerald { background: rgba(16,185,129,0.15); color: #059669; }
+.role:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+.role-icon {
+  font-size: 1rem;
+}
 
-.dark .tag-rose { background: rgba(244,63,94,0.2); color: #fb7185; }
-.dark .tag-amber { background: rgba(245,158,11,0.2); color: #fbbf24; }
-.dark .tag-cyan { background: rgba(6,182,212,0.2); color: #22d3ee; }
-.dark .tag-violet { background: rgba(139,92,246,0.2); color: #a78bfa; }
-.dark .tag-emerald { background: rgba(16,185,129,0.2); color: #34d399; }
+.role-rose {
+  background: rgba(244,63,94,0.1);
+  color: #e11d48;
+  border: 1px solid rgba(244,63,94,0.15);
+}
+.role-rose:hover { box-shadow: 0 8px 24px rgba(244,63,94,0.15); }
 
-.tag-x {
-  color: var(--vp-c-text-3);
-  font-weight: 300;
-  font-size: 0.9rem;
+.role-amber {
+  background: rgba(245,158,11,0.1);
+  color: #d97706;
+  border: 1px solid rgba(245,158,11,0.15);
 }
-.tag-sep {
-  color: var(--vp-c-text-3);
-  margin: 0 2px;
+.role-amber:hover { box-shadow: 0 8px 24px rgba(245,158,11,0.15); }
+
+.role-cyan {
+  background: rgba(6,182,212,0.1);
+  color: #0891b2;
+  border: 1px solid rgba(6,182,212,0.15);
 }
-.tag-desc {
+.role-cyan:hover { box-shadow: 0 8px 24px rgba(6,182,212,0.15); }
+
+.role-violet {
+  background: rgba(139,92,246,0.1);
+  color: #7c3aed;
+  border: 1px solid rgba(139,92,246,0.15);
+}
+.role-violet:hover { box-shadow: 0 8px 24px rgba(139,92,246,0.15); }
+
+.role-emerald {
+  background: rgba(16,185,129,0.1);
+  color: #059669;
+  border: 1px solid rgba(16,185,129,0.15);
+}
+.role-emerald:hover { box-shadow: 0 8px 24px rgba(16,185,129,0.15); }
+
+/* 暗色角色标签 */
+.dark .role-rose { background: rgba(244,63,94,0.15); color: #fb7185; border-color: rgba(244,63,94,0.2); }
+.dark .role-amber { background: rgba(245,158,11,0.15); color: #fbbf24; border-color: rgba(245,158,11,0.2); }
+.dark .role-cyan { background: rgba(6,182,212,0.15); color: #22d3ee; border-color: rgba(6,182,212,0.2); }
+.dark .role-violet { background: rgba(139,92,246,0.15); color: #a78bfa; border-color: rgba(139,92,246,0.2); }
+.dark .role-emerald { background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(16,185,129,0.2); }
+
+/* 描述 */
+.hero-desc {
   color: var(--vp-c-text-2);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+  animation: fadeIn 0.7s ease 0.55s both;
 }
 
 /* Buttons */
 .hero-actions {
   display: flex;
+  justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  animation: fadeIn 0.6s ease 0.7s both;
+  margin-bottom: 40px;
+  animation: fadeIn 0.7s ease 0.6s both;
 }
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 28px;
-  border-radius: 12px;
+  padding: 13px 30px;
+  border-radius: 14px;
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .btn-primary {
-  background: linear-gradient(135deg, #f43f5e, #f59e0b, #10b981, #06b6d4, #8b5cf6);
-  background-size: 300% 300%;
-  animation: gradientFlow 4s ease infinite;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #d946ef);
+  background-size: 200% 200%;
+  animation: gradientFlow 5s ease infinite;
   color: #fff;
-  box-shadow:
-    0 4px 16px rgba(244,63,94,0.25),
-    0 4px 16px rgba(99,102,241,0.2);
+  box-shadow: 0 4px 20px rgba(99,102,241,0.3);
 }
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.04);
-  box-shadow:
-    0 8px 30px rgba(244,63,94,0.3),
-    0 8px 30px rgba(99,102,241,0.25),
-    0 0 50px rgba(245,158,11,0.12);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.35), 0 0 48px rgba(139,92,246,0.15);
 }
 .btn-primary svg {
   transition: transform 0.3s ease;
@@ -276,24 +275,73 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
 }
 .btn-ghost {
   color: var(--vp-c-text-1);
-  border: 2px solid transparent;
-  background:
-    linear-gradient(var(--vp-c-bg), var(--vp-c-bg)) padding-box,
-    linear-gradient(135deg, #f43f5e, #f59e0b, #10b981, #06b6d4, #8b5cf6) border-box;
+  border: 1.5px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
 }
 .btn-ghost:hover {
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 4px 20px rgba(139,92,246,0.15);
+  transform: translateY(-3px);
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.1);
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  animation: fadeIn 0.7s ease 0.7s both;
+}
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--vp-c-brand-1), #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--vp-c-text-3);
+  font-weight: 500;
+}
+.stat-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--vp-c-divider);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.5); }
 }
 
 @media (max-width: 640px) {
-  .hero-wrap { padding: 48px 20px 32px; }
-  .hero-tagline { gap: 6px; }
-  .tag { padding: 3px 10px; font-size: 0.8rem; }
+  .hero-wrap { padding: 48px 20px 24px; }
+  .mobile-br { display: block; }
+  .hero-roles { gap: 8px; }
+  .role { padding: 6px 14px; font-size: 0.82rem; }
+  .hero-stats { gap: 16px; }
+  .stat-num { font-size: 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-wrap { opacity: 1; transform: none; transition: none; }
+  .hero-title { animation: none; }
 }
 </style>
