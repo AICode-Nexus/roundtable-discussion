@@ -49,6 +49,12 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
     <!-- 彩虹分隔线 -->
     <div class="section-divider" aria-hidden="true"></div>
 
+    <!-- 章节标题 -->
+    <div class="section-header">
+      <h2 class="section-title">为什么是现在？</h2>
+      <p class="section-subtitle">四个关键议题，探讨 AI 时代的团队协作变革</p>
+    </div>
+
     <div class="cards-grid">
       <a
         v-for="(card, i) in cards"
@@ -110,11 +116,50 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
   100% { background-position: 200% center; }
 }
 
+/* 章节标题 */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cards-section.show .section-header {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #f43f5e, #f59e0b, #06b6d4, #8b5cf6);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
 /* 网格 */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 /* 卡片 */
@@ -122,29 +167,33 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 28px 24px 20px;
-  border-radius: 20px;
+  padding: 32px 28px 24px;
+  border-radius: 24px;
   text-decoration: none;
   color: var(--vp-c-text-1);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* 玻璃态底 */
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1.5px solid rgba(255,255,255,0.4);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255,255,255,0.5);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.06),
+    0 2px 8px rgba(0,0,0,0.04);
 
   /* 入场动画 */
   opacity: 0;
-  transform: translateY(24px) scale(0.96);
+  transform: translateY(30px) scale(0.95);
 }
 
 .dark .topic-card {
-  background: rgba(30,30,46,0.6);
-  border-color: rgba(255,255,255,0.08);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  background: rgba(30,30,46,0.7);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.3),
+    0 2px 8px rgba(0,0,0,0.2);
 }
 
 .cards-section.show .topic-card {
@@ -169,32 +218,52 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
 
 /* hover */
 .topic-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-12px) scale(1.03);
   border-color: var(--card-color);
   box-shadow:
-    0 20px 60px color-mix(in srgb, var(--card-color) 18%, transparent),
-    0 0 0 1px var(--card-color);
+    0 24px 72px color-mix(in srgb, var(--card-color) 22%, transparent),
+    0 0 0 1.5px var(--card-color),
+    0 8px 16px rgba(0,0,0,0.08);
 }
 
 /* 图标 */
 .card-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   background: var(--card-color-light);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
 }
+
+.card-icon::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  background: var(--card-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
 .topic-card:hover .card-icon {
-  transform: scale(1.1) rotate(-3deg);
-  background: color-mix(in srgb, var(--card-color) 20%, transparent);
+  transform: scale(1.15) rotate(-5deg);
+  background: color-mix(in srgb, var(--card-color) 25%, transparent);
 }
+
+.topic-card:hover .card-icon::before {
+  opacity: 0.3;
+}
+
 .icon-emoji {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 /* 标题 */
@@ -233,12 +302,25 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
 }
 
 @media (max-width: 640px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
   .cards-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
   }
   .topic-card {
-    padding: 24px 20px 16px;
+    padding: 28px 24px 20px;
+  }
+  .card-icon {
+    width: 56px;
+    height: 56px;
+  }
+  .icon-emoji {
+    font-size: 1.8rem;
   }
 }
 </style>

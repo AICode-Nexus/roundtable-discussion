@@ -6,10 +6,14 @@ const events = [
   { date: '2026 年 3 月', title: 'AI-native 公司效率数据公布', desc: 'Forbes 报道：AI-native 公司人均营收是传统 SaaS 的 7-13 倍。', color: '#6366f1' },
   { date: '2026 年 3 月', title: 'Cursor ARR 突破 $20 亿', desc: '67% 的财富 500 强使用，每天生成 1.5 亿行企业代码。', color: '#d946ef' },
   { date: '2026 年 2 月', title: 'Klarna 员工降至 3,000 人', desc: '从 2022 年的 7,000 人减半，同时员工薪资提升 60%。AI 重构了团队结构。', color: '#8b5cf6' },
+  { date: '2026 年 1 月', title: 'GitHub Copilot 470 万付费用户', desc: '90% 的财富 100 强企业使用。AI 辅助编码从可选项变成开发者标配。', color: '#3b82f6' },
   { date: '2025 年 11 月', title: 'Cursor D 轮融资 $23 亿', desc: '估值 $293 亿。AI 编码从尝鲜变成企业标配。', color: '#06b6d4' },
+  { date: '2025 年 9 月', title: 'Cognition (Devin) 估值 $102 亿', desc: '$4 亿融资，收购 Windsurf 后估值翻倍。"AI 软件工程师"赛道诞生首个独角兽巨头。', color: '#14b8a6' },
   { date: '2025 年 9 月', title: 'Klarna AI 客服翻车', desc: '因 AI 客服质量问题将部分员工重新调回客服岗，揭示了 AI 替代的边界。', color: '#10b981' },
+  { date: '2025 年 5 月', title: 'Claude Code + OpenAI Codex 同月发布', desc: '两大 AI 巨头同时押注终端编码 Agent。AI 编程从补全进入自主执行时代。', color: '#a855f7' },
   { date: '2025 年 5 月', title: 'Duolingo 宣布 AI-first', desc: '逐步淘汰所有可被 AI 替代的外包人员，一次性发布 148 门 AI 生成课程。', color: '#f59e0b' },
   { date: '2025 年 4 月', title: 'Shopify CEO 全员备忘录', desc: '申请新增人头前必须证明 AI 无法完成该工作。AI 使用成为基本要求。', color: '#f43f5e' },
+  { date: '2025 年 2 月', title: 'Karpathy 提出 "Vibe Coding"', desc: '一条推文定义了新编程范式——不写代码，只描述意图。后被评为 2025 年度词汇。', color: '#ec4899' },
 ]
 
 const show = ref(false)
