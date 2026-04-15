@@ -41,6 +41,9 @@
   padding-bottom: 16px;
   border-bottom: 3px solid transparent;
   border-image: linear-gradient(90deg, #6366f1, #d946ef, transparent) 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 /* ============================================
@@ -58,8 +61,9 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 4px;
-  bottom: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(100% - 8px);
   width: 4px;
   border-radius: 4px;
   background: linear-gradient(180deg, #6366f1, #d946ef);

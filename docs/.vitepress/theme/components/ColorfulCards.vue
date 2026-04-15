@@ -135,6 +135,9 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 12px;
+  border: none;
+  border-top: none;
+  padding-left: 0;
   background: linear-gradient(135deg, #f43f5e, #f59e0b, #06b6d4, #8b5cf6);
   background-size: 200% auto;
   -webkit-background-clip: text;
