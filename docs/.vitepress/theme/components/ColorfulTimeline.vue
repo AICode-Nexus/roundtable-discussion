@@ -5,11 +5,13 @@ const events = [
   { date: '2026 年 4 月', color: '#f97316', items: [
     { title: 'Forbes：三位 Solo Founder 证明"一人公司"', desc: 'Sam Altman 预言的"一人十亿美元公司"正在成为现实。Solo founder 比例升至 36.3%。' },
     { title: 'Claude 4 / GPT-5 发布', desc: '新一代模型在编码、推理能力上再次跃升，Agent 自主完成复杂项目成为常态。' },
+    { title: '🇨🇳 Kimi K2.6-code-preview 上线', desc: '月之暗面发布编程专用万亿参数模型，Kimi Code CLI 支持 MCP 协议，100 个 Agent 并行协作。' },
   ]},
   { date: '2026 年 3 月', color: '#6366f1', items: [
     { title: 'AI-native 公司效率数据公布', desc: 'Forbes 报道：AI-native 公司人均营收是传统 SaaS 的 7-13 倍。' },
     { title: 'Cursor ARR 突破 $20 亿', desc: '67% 的财富 500 强使用，每天生成 1.5 亿行企业代码。' },
     { title: 'Devin 企业版大规模落地', desc: 'Cognition 宣布 Devin 已进入 200+ 企业生产环境，自主处理 Tier-1 工单。' },
+    { title: '🇨🇳 DeepSeek-R2 开源发布', desc: '1.2 万亿参数 MoE 模型，仅激活 78B，性能比肩 GPT-5，成本降低 97%。开源社区再次沸腾。' },
   ]},
   { date: '2026 年 2 月', color: '#8b5cf6', items: [
     { title: 'Klarna 员工降至 3,000 人', desc: '从 2022 年的 7,000 人减半，同时员工薪资提升 60%。AI 重构了团队结构。' },
@@ -18,12 +20,15 @@ const events = [
   { date: '2026 年 1 月', color: '#3b82f6', items: [
     { title: 'GitHub Copilot 470 万付费用户', desc: '90% 的财富 100 强企业使用。AI 辅助编码从可选项变成开发者标配。' },
     { title: 'Google 裁员 + "AI 优先"重组', desc: 'Google 宣布新一轮组织重组，多个团队合并，明确要求所有产品线嵌入 AI 能力。' },
+    { title: '🇨🇳 Trae 全球注册用户突破千万', desc: '字节跳动 AI IDE 因免费策略和多模型支持在国内外快速扩张，成为 Cursor 最大竞争对手。' },
   ]},
   { date: '2025 年 12 月', color: '#84cc16', items: [
     { title: 'OpenAI o3 发布', desc: '推理模型再进化，ARC-AGI 测试得分大幅提升，"深度思考"成为 AI 编码新范式。' },
+    { title: '🇨🇳 DeepSeek-V3.2 发布', desc: '685B 参数，AIME 2025 得分 96% 超越 GPT-5。中国开源模型在推理能力上首次全面领先。' },
   ]},
   { date: '2025 年 11 月', color: '#06b6d4', items: [
     { title: 'Cursor D 轮融资 $23 亿', desc: '估值 $293 亿。AI 编码从尝鲜变成企业标配。' },
+    { title: '🇨🇳 Kimi K2-Thinking 发布', desc: '月之暗面发布万亿参数开源推理模型，支持 200+ 步连续工具调用，SWE-Bench 得分 71%。' },
   ]},
   { date: '2025 年 10 月', color: '#f472b6', items: [
     { title: 'Meta 开源 Llama 4 系列', desc: '开源模型性能逼近闭源前沿，中小团队获得部署自主 AI 编码助手的能力。' },
@@ -31,9 +36,12 @@ const events = [
   { date: '2025 年 9 月', color: '#14b8a6', items: [
     { title: 'Cognition (Devin) 估值 $102 亿', desc: '$4 亿融资，收购 Windsurf 后估值翻倍。"AI 软件工程师"赛道诞生首个独角兽巨头。' },
     { title: 'Klarna AI 客服翻车', desc: '因 AI 客服质量问题将部分员工重新调回客服岗，揭示了 AI 替代的边界。' },
+    { title: '🇨🇳 Kimi K2 开源发布', desc: '月之暗面发布 1T 参数 MoE 模型，SWE-Bench Verified 得分 69.2%，匹配顶级编程模型。' },
   ]},
   { date: '2025 年 7 月', color: '#fbbf24', items: [
     { title: 'Claude 3.5 Sonnet 引爆 Agentic Coding', desc: '被开发者评为"最懂代码的模型"，Cursor/Windsurf 用户量暴涨，AI 编码进入主流。' },
+    { title: '🇨🇳 Trae SOLO 模式发布', desc: '字节跳动推出 AI 自主编程模式，登顶 SWE-bench 榜首，支持端到端自动化开发。' },
+    { title: '🇨🇳 Qwen3-Coder 发布', desc: '阿里发布 480B 参数 Agentic 编程模型，256K 上下文，支持长周期多步骤编程任务。' },
   ]},
   { date: '2025 年 6 月', color: '#a3a3a3', items: [
     { title: 'Apple WWDC：Siri + AI 重构', desc: 'Apple Intelligence 全面落地，Xcode AI 助手发布，移动端开发工作流被重新定义。' },
@@ -41,6 +49,7 @@ const events = [
   { date: '2025 年 5 月', color: '#a855f7', items: [
     { title: 'Claude Code + OpenAI Codex 同月发布', desc: '两大 AI 巨头同时押注终端编码 Agent。AI 编程从补全进入自主执行时代。' },
     { title: 'Duolingo 宣布 AI-first', desc: '逐步淘汰所有可被 AI 替代的外包人员，一次性发布 148 门 AI 生成课程。' },
+    { title: '🇨🇳 DeepSeek-Prover-V2 发布', desc: 'DeepSeek 发布形式化数学证明专用模型，在 Lean 4 定理证明上达到新高度。' },
   ]},
   { date: '2025 年 4 月', color: '#f43f5e', items: [
     { title: 'Shopify CEO 全员备忘录', desc: '申请新增人头前必须证明 AI 无法完成该工作。AI 使用成为基本要求。' },
