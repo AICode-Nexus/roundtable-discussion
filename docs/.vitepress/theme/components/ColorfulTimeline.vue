@@ -3,12 +3,14 @@ import { ref, onMounted } from 'vue'
 
 const events = [
   { date: '2026 年 3 月', color: '#6366f1', items: [
+    { title: 'Forbes：AI-native 公司人均营收是传统 SaaS 的 7-13 倍', desc: '小团队高产出成为新常态，"超级团队"模式获得数据验证。' },
     { title: 'Cursor ARR 突破 $20 亿', desc: '67% 的财富 500 强使用，每天生成 1.5 亿行企业代码。AI IDE 赛道诞生首个超级独角兽。' },
-    { title: '🇨🇳 DeepSeek-R2 开源发布', desc: '1.2 万亿参数 MoE 模型，仅激活 78B，性能比肩 GPT-5，成本降低 97%。开源编码模型再次沸腾。' },
+    { title: '🇨🇳 DeepSeek-R2 开源发布', desc: '1.2 万亿参数 MoE 模型，仅激活 78B，性能比肩 GPT-5，成本降低 97%。' },
   ]},
   { date: '2026 年 2 月', color: '#8b5cf6', items: [
+    { title: 'Klarna：7,000→3,000 人，薪资反升 60%', desc: 'AI 替代执行层岗位，但剩余员工人均产出和薪资大幅提升——"超级团队"的典型样本。' },
     { title: 'GitHub Copilot 多 Agent 工作流上线', desc: 'Copilot 支持多智能体并行协作，从代码补全进化为全流程自动化开发平台。' },
-    { title: 'Cursor 推出 Background Agents', desc: '后台 Agent 在隔离 VM 中自主运行，开发者可同时处理多个编码任务。' },
+    { title: 'Cursor 推出 Background Agents', desc: '后台 Agent 在隔离 VM 中自主运行，一个开发者可同时处理多个编码任务。' },
   ]},
   { date: '2026 年 1 月', color: '#3b82f6', items: [
     { title: 'GitHub Copilot 470 万付费用户', desc: '90% 的财富 100 强企业使用。AI 辅助编码从可选项变成开发者标配。' },
@@ -30,6 +32,11 @@ const events = [
     { title: 'GPT-5-Codex 发布', desc: 'OpenAI 发布编程专用 GPT-5 变体，支持 7 小时长任务重构，接入 GitHub Copilot 公测。' },
     { title: 'Claude Sonnet 4.5 发布', desc: 'Anthropic 新一代编码模型，成为 Cursor/Windsurf 等 IDE 的默认首选模型。' },
     { title: '🇨🇳 Kimi K2 开源发布', desc: '月之暗面 1T 参数 MoE 模型，SWE-Bench Verified 得分 69.2%，匹配顶级编程模型。' },
+    { title: 'Cognition (Devin) 收购 Windsurf', desc: '$4 亿融资，估值 $102 亿。"AI 软件工程师"赛道诞生首个独角兽巨头。' },
+  ]},
+  { date: '2025 年 8 月', color: '#0ea5e9', items: [
+    { title: 'Forbes：十亿美元一人公司比想象中更快到来', desc: 'Sam Altman 预言引发全球讨论，Solo Founder 比例升至 36.3%，"超级个体"从概念走向主流。' },
+    { title: 'Stack Overflow 流量较峰值下降超 60%', desc: '开发者转向 AI 对话式问答，传统技术社区加速转型。编程知识获取方式被彻底改变。' },
   ]},
   { date: '2025 年 7 月', color: '#fbbf24', items: [
     { title: 'AWS 发布 Kiro IDE 公测', desc: 'Amazon 推出 Spec-driven Agentic IDE，主打"超越 Vibe Coding"的规范驱动开发。' },
@@ -45,6 +52,9 @@ const events = [
     { title: '🇨🇳 DeepSeek-Prover-V2 发布', desc: 'DeepSeek 发布形式化定理证明专用模型，在 Lean 4 证明能力上达到新高度。' },
   ]},
   { date: '2025 年 4 月', color: '#f43f5e', items: [
+    { title: 'Shopify CEO 全员备忘录："证明 AI 无法完成"', desc: '4 月 7 日，Tobi 要求申请新增人头前必须证明 AI 无法完成该工作。组织重构从口号变成制度。' },
+    { title: 'Duolingo 宣布 AI-first，淘汰外包人员', desc: '逐步淘汰所有可被 AI 替代的外包岗位，一次性发布 148 门 AI 生成课程。' },
+    { title: 'Medvi：一人公司首次突破 $4 亿年营收', desc: 'Matthew Gallagher 用 AI 工具从家中创办 GLP-1 远程医疗公司，首年营收 $401M，"超级个体"成为现实。' },
     { title: 'OpenAI Codex CLI 开源', desc: '4 月 16 日以 Apache 2.0 开源，本地终端编码 Agent，开启 CLI 编程 Agent 时代。' },
   ]},
   { date: '2025 年 3 月', color: '#c084fc', items: [
@@ -80,8 +90,8 @@ onMounted(() => { setTimeout(() => show.value = true, 800) })
     <!-- 彩虹分隔装饰 -->
     <div class="tl-divider" aria-hidden="true"></div>
 
-    <h2 class="tl-title">AI Coding 大事记</h2>
-    <p class="tl-subtitle">2024-2026 · 编码模型、IDE 工具、编程能力的集中爆发</p>
+    <h2 class="tl-title">为什么是现在？</h2>
+    <p class="tl-subtitle">AI Coding 大爆发 · 超级个体崛起 · 团队正在被重构</p>
 
     <div class="tl-list">
       <!-- 轴线 -->
