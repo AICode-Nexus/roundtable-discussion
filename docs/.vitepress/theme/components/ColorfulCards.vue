@@ -134,9 +134,11 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
 .section-title {
   font-size: 2rem;
   font-weight: 800;
+  line-height: 1.4;
   margin-bottom: 12px;
   border: none;
   border-top: none;
+  padding-top: 0;
   padding-left: 0;
   background: linear-gradient(135deg, #f43f5e, #f59e0b, #06b6d4, #8b5cf6);
   background-size: 200% auto;
