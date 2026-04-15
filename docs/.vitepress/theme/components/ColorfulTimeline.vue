@@ -47,9 +47,20 @@ const events = [
   ]},
   { date: '2025 年 3 月', color: '#c084fc', items: [
     { title: 'GPT-4o + Claude 3 Opus 价格战', desc: 'API 价格半年内降幅超 80%，AI 调用成本不再是瓶颈，小团队也能大规模使用。' },
+    { title: '🇨🇳 字节跳动发布 Trae 国内版', desc: '中国首个 AI 原生 IDE，内置豆包与 DeepSeek 满血版模型，支持自然语言生成完整应用。' },
   ]},
   { date: '2025 年 2 月', color: '#ec4899', items: [
     { title: 'Karpathy 提出 "Vibe Coding"', desc: '一条推文定义了新编程范式——不写代码，只描述意图。后被评为 2025 年度词汇。' },
+    { title: '🇨🇳 通义灵码 2.0 发布 AI 程序员', desc: '阿里云推出国内首个 AI 程序员，支持工程级多文件生成，集成 DeepSeek 模型，个人免费使用。' },
+  ]},
+  { date: '2025 年 1 月', color: '#ef4444', items: [
+    { title: '🇨🇳 DeepSeek-R1 发布，登顶全球 App Store', desc: '1 月 20 日开源发布，训练成本仅为 GPT-4 的 1/20。一周内超越 ChatGPT 登顶美国 App Store，震动华尔街。' },
+  ]},
+  { date: '2024 年 12 月', color: '#0d9488', items: [
+    { title: '🇨🇳 DeepSeek-V3 开源发布', desc: '671B 参数 MoE 模型，性能比肩 GPT-4o，训练成本仅 $557 万。开源社区震动，中国大模型实力获全球认可。' },
+  ]},
+  { date: '2024 年 11 月', color: '#64748b', items: [
+    { title: '🇨🇳 Qwen2.5-Coder 32B 开源', desc: '阿里通义千问发布编程专用模型，性能比肩 GPT-4o，可本地部署。国产开源编程模型首次进入第一梯队。' },
   ]},
 ]
 
