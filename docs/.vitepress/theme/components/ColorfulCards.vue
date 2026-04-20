@@ -4,8 +4,8 @@ import { ref, onMounted } from 'vue'
 const cards = [
   {
     emoji: '💬',
-    title: '开场：AI 放大个体还是重组团队？',
-    desc: '当 AI 让一个人能做过去一个团队的事，我们该兴奋还是该焦虑？五个岗位，五种立场。',
+    title: 'AI 在放大个体，还是在重组团队？',
+    desc: '当一个人加上 AI 就像一支小队，我们该重新理解个人能力，还是团队结构？',
     link: '/roundtable-discussion/episodes/ep01/topic-1',
     color: '#f43f5e',
     colorLight: 'rgba(244,63,94,0.12)',
@@ -13,30 +13,39 @@ const cards = [
   },
   {
     emoji: '🔥',
-    title: '冲突：还需不需要完整链路？',
-    desc: '一个需求从产品到设计到前后端到测试的完整链路，在 AI 时代是否还有必要？',
+    title: '一个需求还需不需要完整链路？',
+    desc: '效率被压到极致后，流程到底是护栏，还是负担？',
     link: '/roundtable-discussion/episodes/ep01/topic-2',
     color: '#f59e0b',
     colorLight: 'rgba(245,158,11,0.12)',
     gradient: 'linear-gradient(135deg, #f59e0b, #fbbf24)',
   },
   {
-    emoji: '⚡',
-    title: '升级：AI 出了设计稿和代码，怎么看？',
-    desc: '产品经理写了 PRD 又用 AI 出了设计稿和代码，设计和前端同学怎么看？',
-    link: '/roundtable-discussion/episodes/ep01/topic-3',
+    emoji: '🧭',
+    title: '未来 6 个月，每个岗位最该升级什么？',
+    desc: '如果只能升级一项能力，今天该押注判断力、架构力，还是 AI 协作力？',
+    link: '/roundtable-discussion/episodes/ep01/topic-4',
     color: '#06b6d4',
     colorLight: 'rgba(6,182,212,0.12)',
     gradient: 'linear-gradient(135deg, #06b6d4, #22d3ee)',
   },
   {
-    emoji: '🧭',
-    title: '收束：未来 3 年最该升级的能力',
-    desc: '从冲突回到建设——每个岗位在 AI 时代最该升级的核心能力是什么？',
-    link: '/roundtable-discussion/episodes/ep01/topic-4',
+    emoji: '🎓',
+    title: '新人还需要从零学起吗？',
+    desc: 'AI 能补短板，但它到底是在加速成长，还是制造空心化？',
+    link: '/roundtable-discussion/episodes/ep01/topic-6',
     color: '#8b5cf6',
     colorLight: 'rgba(139,92,246,0.12)',
     gradient: 'linear-gradient(135deg, #8b5cf6, #a78bfa)',
+  },
+  {
+    emoji: '🌐',
+    title: '人人全栈是解放还是灾难？',
+    desc: '当每个人都能借 AI 越界，速度和专业之间的边界还剩下什么？',
+    link: '/roundtable-discussion/episodes/ep01/topic-8',
+    color: '#10b981',
+    colorLight: 'rgba(16,185,129,0.12)',
+    gradient: 'linear-gradient(135deg, #10b981, #34d399)',
   },
 ]
 
@@ -52,7 +61,7 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
     <!-- 章节标题 -->
     <div class="section-header">
       <h2 class="section-title">为什么是现在？</h2>
-      <p class="section-subtitle">四个关键议题，探讨 AI 时代的团队协作变革</p>
+      <p class="section-subtitle">5 个核心话题，集中展开这一期最值得被转发和讨论的问题</p>
     </div>
 
     <div class="cards-grid">
@@ -163,7 +172,7 @@ onMounted(() => { setTimeout(() => show.value = true, 400) })
 /* 网格 */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 

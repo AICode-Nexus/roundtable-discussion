@@ -41,7 +41,7 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
         </span>
       </div>
 
-      <p class="hero-desc">五种角色，五种立场 — 跨角色的深度碰撞</p>
+      <p class="hero-desc">5 个核心话题，拆开 AI 时代最值得公开讨论的团队问题</p>
 
       <!-- 按钮 -->
       <div class="hero-actions">
@@ -57,8 +57,8 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
       <!-- 数据亮点 -->
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-num">8</span>
-          <span class="stat-label">个议题</span>
+          <span class="stat-num">5</span>
+          <span class="stat-label">个核心话题</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
@@ -67,8 +67,8 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num">15</span>
-          <span class="stat-label">篇深度讨论</span>
+          <span class="stat-num">1</span>
+          <span class="stat-label">条主线讨论</span>
         </div>
       </div>
     </div>

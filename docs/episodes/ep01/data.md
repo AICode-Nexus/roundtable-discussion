@@ -321,7 +321,7 @@ type: data
 
 ## 角色生存指数
 
-来自 [议题 7：团队只留 3 人](/episodes/ep01/topic-7) 的投票结果。
+基于本期关于角色取舍与团队重组的讨论整理的投票结果。
 
 <div class="survival-chart">
   <div class="survival-row">
