@@ -43,6 +43,18 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
 
       <p class="hero-desc">5 个核心话题，拆开 AI 时代最值得公开讨论的团队问题</p>
 
+      <div class="hero-event">
+        <div class="event-card">
+          <span class="event-label">活动形式</span>
+          <p class="event-text"><strong>线下：</strong>A5-5F 讯飞大学-北斗教室</p>
+          <p class="event-text"><strong>线上：</strong>讯飞直播间线上直播 &amp; i讯飞远程会议</p>
+        </div>
+        <div class="event-card">
+          <span class="event-label">活动时间</span>
+          <p class="event-text">04/21 周二 16:30 到 18:00</p>
+        </div>
+      </div>
+
       <!-- 按钮 -->
       <div class="hero-actions">
         <a href="/roundtable-discussion/episodes/ep01/" class="btn btn-primary">
@@ -232,8 +244,60 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
 .hero-desc {
   color: var(--vp-c-text-2);
   font-size: 0.95rem;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   animation: fadeIn 0.7s ease 0.55s both;
+}
+
+/* Event info */
+.hero-event {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 14px;
+  margin: 0 auto 32px;
+  max-width: 760px;
+  text-align: left;
+  animation: fadeIn 0.7s ease 0.58s both;
+}
+.event-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(99,102,241,0.12);
+  background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.62));
+  box-shadow: 0 12px 30px rgba(99,102,241,0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.dark .event-card {
+  border-color: rgba(129,140,248,0.18);
+  background: linear-gradient(135deg, rgba(30,30,46,0.78), rgba(30,30,46,0.62));
+  box-shadow: 0 12px 30px rgba(0,0,0,0.24);
+}
+.event-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.12);
+  color: var(--vp-c-brand-1);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.dark .event-label {
+  background: rgba(129,140,248,0.18);
+}
+.event-text {
+  margin: 0;
+  color: var(--vp-c-text-1);
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+.event-text + .event-text {
+  margin-top: 4px;
+}
+.event-text strong {
+  color: var(--vp-c-brand-1);
 }
 
 /* Buttons */
@@ -336,6 +400,8 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
   .mobile-br { display: block; }
   .hero-roles { gap: 8px; }
   .role { padding: 6px 14px; font-size: 0.82rem; }
+  .hero-event { grid-template-columns: 1fr; gap: 12px; }
+  .event-card { padding: 14px 16px; }
   .hero-stats { gap: 16px; }
   .stat-num { font-size: 1.25rem; }
 }
