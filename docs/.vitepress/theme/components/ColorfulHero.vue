@@ -43,15 +43,20 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
 
       <p class="hero-desc">5 个核心话题，拆开 AI 时代最值得公开讨论的团队问题</p>
 
-      <div class="hero-event">
-        <div class="event-card">
+      <div class="hero-event" aria-label="活动信息">
+        <div class="event-row">
           <span class="event-label">活动形式</span>
-          <p class="event-text"><strong>线下：</strong>A5-5F 讯飞大学-北斗教室</p>
-          <p class="event-text"><strong>线上：</strong>讯飞直播间线上直播 &amp; i讯飞远程会议</p>
+          <div class="event-copy">
+            <span class="event-segment"><strong>线下</strong>A5-5F 讯飞大学-北斗教室</span>
+            <span class="event-dot" aria-hidden="true"></span>
+            <span class="event-segment"><strong>线上</strong>讯飞直播间线上直播 · i讯飞远程会议</span>
+          </div>
         </div>
-        <div class="event-card">
+        <div class="event-row">
           <span class="event-label">活动时间</span>
-          <p class="event-text">04/21 周二 16:30 到 18:00</p>
+          <div class="event-copy">
+            <span class="event-time">04/21 周二 16:30-18:00</span>
+          </div>
         </div>
       </div>
 
@@ -250,54 +255,66 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
 
 /* Event info */
 .hero-event {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 14px;
-  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto 30px;
   max-width: 760px;
-  text-align: left;
+  padding-top: 14px;
+  text-align: center;
+  border-top: 1px solid rgba(99,102,241,0.12);
   animation: fadeIn 0.7s ease 0.58s both;
 }
-.event-card {
-  padding: 16px 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(99,102,241,0.12);
-  background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.62));
-  box-shadow: 0 12px 30px rgba(99,102,241,0.08);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+.dark .hero-event {
+  border-top-color: rgba(129,140,248,0.18);
 }
-.dark .event-card {
-  border-color: rgba(129,140,248,0.18);
-  background: linear-gradient(135deg, rgba(30,30,46,0.78), rgba(30,30,46,0.62));
-  box-shadow: 0 12px 30px rgba(0,0,0,0.24);
+.event-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 14px;
+  flex-wrap: wrap;
 }
 .event-label {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 10px;
-  margin-bottom: 10px;
-  border-radius: 999px;
-  background: rgba(99,102,241,0.12);
+  display: inline-block;
   color: var(--vp-c-brand-1);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
-.dark .event-label {
-  background: rgba(129,140,248,0.18);
+.event-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 10px;
+  flex-wrap: wrap;
+  color: var(--vp-c-text-2);
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
-.event-text {
-  margin: 0;
+.event-segment {
+  color: var(--vp-c-text-2);
+  white-space: nowrap;
+}
+.event-segment strong {
   color: var(--vp-c-text-1);
-  font-size: 0.93rem;
-  line-height: 1.7;
+  font-weight: 700;
+  margin-right: 6px;
 }
-.event-text + .event-text {
-  margin-top: 4px;
+.event-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.28);
+  flex: 0 0 auto;
 }
-.event-text strong {
-  color: var(--vp-c-brand-1);
+.event-time {
+  color: var(--vp-c-text-1);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
 }
 
 /* Buttons */
@@ -400,8 +417,15 @@ onMounted(() => { setTimeout(() => visible.value = true, 100) })
   .mobile-br { display: block; }
   .hero-roles { gap: 8px; }
   .role { padding: 6px 14px; font-size: 0.82rem; }
-  .hero-event { grid-template-columns: 1fr; gap: 12px; }
-  .event-card { padding: 14px 16px; }
+  .hero-event {
+    gap: 12px;
+    padding-top: 12px;
+  }
+  .event-row { gap: 8px 10px; }
+  .event-copy { gap: 6px 8px; font-size: 0.88rem; }
+  .event-segment { white-space: normal; }
+  .event-dot { display: none; }
+  .event-time { font-size: 0.95rem; }
   .hero-stats { gap: 16px; }
   .stat-num { font-size: 1.25rem; }
 }
