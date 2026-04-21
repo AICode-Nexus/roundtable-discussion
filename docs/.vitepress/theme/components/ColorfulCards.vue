@@ -4,8 +4,8 @@ import { ref, onMounted } from 'vue'
 const cards = [
   {
     emoji: '💬',
-    title: 'AI 在放大个体，还是在重组团队？',
-    desc: '当一个人加上 AI 就像一支小队，我们该重新理解个人能力，还是团队结构？',
+    title: 'AI 到底在放大个体，还是在重塑团队？',
+    desc: 'AI 先把一个人的产能推高，再倒逼团队从串行分工走向更小、更快的协作单元。',
     link: '/roundtable-discussion/episodes/ep01/topic-1',
     color: '#f43f5e',
     colorLight: 'rgba(244,63,94,0.12)',

@@ -4,7 +4,7 @@ export default defineConfig({
   base: '/roundtable-discussion/',
   lang: 'zh-CN',
   title: '圆桌论坛',
-  description: 'AI 时代：超级个体的崛起与团队的重构 — 跨角色的深度碰撞',
+  description: 'AI 时代：放大个体，重塑团队 — 跨角色的深度碰撞',
 
   head: [
     ['link', { rel: 'icon', href: '/roundtable-discussion/favicon.ico' }]
@@ -20,11 +20,11 @@ export default defineConfig({
     sidebar: {
       '/episodes/ep01/': [
         {
-          text: '第十三期：超级个体 vs 超级团队',
+          text: '第十三期：放大个体，重塑团队',
           items: [
             { text: '📋 本期概览', link: '/episodes/ep01/' },
             { text: '👥 嘉宾角色解读', link: '/episodes/ep01/roles' },
-            { text: '💬 AI 到底在放大个体，还是在重组团队？', link: '/episodes/ep01/topic-1' },
+            { text: '💬 AI 到底在放大个体，还是在重塑团队？', link: '/episodes/ep01/topic-1' },
             { text: '🔥 一个需求还需不需要完整链路？', link: '/episodes/ep01/topic-2' },
             { text: '🧭 未来 6 个月，每个岗位最该升级什么？', link: '/episodes/ep01/topic-4' },
             { text: '🎓 新人还需要从零学起吗？', link: '/episodes/ep01/topic-6' },

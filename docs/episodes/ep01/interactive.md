@@ -10,30 +10,30 @@ type: interactive
 
 ---
 
-## 议题 1：AI 到底在放大个体，还是在重组团队？
+## 议题 1：AI 到底在放大个体，还是在重塑团队？
 
 <div class="poll-section">
-<div class="poll-question">你的立场是？</div>
+<div class="poll-question">你更认同哪种判断？</div>
 <div class="poll-options">
 <div class="poll-option">
 <input type="radio" name="poll1" id="poll1-a" />
 <label for="poll1-a">
 <span class="option-emoji">🚀</span>
-<span class="option-text">放大个体——一个人 + AI 已经能覆盖过去一个小团队的产出</span>
+<span class="option-text">放大个体——最显著的变化，是一个人已经能覆盖过去更多环节和产出</span>
 </label>
 </div>
 <div class="poll-option">
 <input type="radio" name="poll1" id="poll1-b" />
 <label for="poll1-b">
 <span class="option-emoji">🔄</span>
-<span class="option-text">重组团队——真正变化的不是人数，而是协作方式和角色边界</span>
+<span class="option-text">重塑团队——更深的变化，是协作接口、责任归属和分工方式都被改写</span>
 </label>
 </div>
 <div class="poll-option">
 <input type="radio" name="poll1" id="poll1-c" />
 <label for="poll1-c">
 <span class="option-emoji">🤝</span>
-<span class="option-text">两者同时发生——超级个体和更小更精的团队会一起出现</span>
+<span class="option-text">两者同时发生——个体变强只是第一层，团队被重塑才是更长期的结果</span>
 </label>
 </div>
 </div>
@@ -41,9 +41,9 @@ type: interactive
 
 ### 💭 延伸思考
 
-- 你所在的团队，过去一年人数是增加了还是减少了？
-- 如果让你一个人 + AI 覆盖当前团队的工作，你觉得能做到几成？
-- 你认为团队缩小后，最不能被省掉的角色是什么？
+- 你所在的团队，最近一年最先被 AI 压缩掉的是哪一类协作环节？
+- 如果团队人数减半，你最想补的不是人，而是哪一种机制？
+- 你更担心没有产能，还是没有 Owner、标准和验证？
 
 ---
 
